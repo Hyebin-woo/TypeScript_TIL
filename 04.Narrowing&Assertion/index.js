@@ -6,7 +6,7 @@
         // 해결법
         //1. 타입을 하나로 Narrowing 해주기
         // 꼭 typeof를 쓸 필요는 없고 in, instanceof 키워드도 사용가능합니다.
-        function 내함수(x) {
+        function 내함수1(x) {
             if (typeof x === "number") {
                 return x + 1;
             }
