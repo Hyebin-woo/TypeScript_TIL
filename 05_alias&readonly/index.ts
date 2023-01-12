@@ -28,12 +28,15 @@
     // 여자.name='혜빈';  터미널에서 에러남 실제로 변환가능
 }
 {
-    // type 합치기 1
+    // | 연산자로 type 합치기
     type Name = string;
     type Age = number;
     type Person = Name | Age;
 
+    // & 연산자로 type 합치기
     type PositionX = { x: number };
     type PositionY = { y: number };
     type NewType = PositionX & PositionY;
 }
+// 같은 이름의 type 변수 재정의 불가능!
+
