@@ -1,3 +1,5 @@
+// 타입의 정의가 너무 길면 Type Aliases (별칭)
+
 {
     // 일반 변수랑 구분하기 위해 대부분 타입 변수는 대문자로 씀
     type Animal = string | number | undefined;
@@ -5,16 +7,17 @@
     let 동물: Animal = 123;
 }
 {
+    //object 타입도 저장가능
     type Animal = { name: string; age: number };
 
     let 동물: Animal = { name: "woo", age: 20 };
 }
 {
-    const 출생지역 = { region: "seoul" };
-    출생지역.region = "busan";
     // const 변수는 등호로 재할당만 막는 역할
     // object 수정은 자유롭게 가능하다.
-    // 타입스크립트는 readonly 또는 ? 로 이걸 막을 수 있다.
+    // 하지만 타입스크립트는 readonly 또는 ? 로 이걸 막을 수 있다.
+    const 출생지역 = { region: "seoul" };
+    출생지역.region = "busan";
 
     type Me = {
         readonly name: string;
@@ -39,4 +42,3 @@
     type NewType = PositionX & PositionY;
 }
 // 같은 이름의 type 변수 재정의 불가능!
-
